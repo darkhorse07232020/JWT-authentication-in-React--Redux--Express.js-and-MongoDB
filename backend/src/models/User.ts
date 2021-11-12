@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
-import Joi, { string } from 'joi';
+import Joi from 'joi';
 
 const Schema = mongoose.Schema;
 
@@ -19,7 +19,7 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    required: true,
+    default: '',
   },
   provider: {
     type: [String],
@@ -28,7 +28,16 @@ const userSchema = new Schema({
   role: {
     type: Number,
     required: true,
-  }
+  },
+  status: {
+    type: String,
+    enum: ['Pending', 'Active'],
+    default: 'Pending'
+  },
+  confirmationCode: {
+    type: String,
+    default: '',
+  },
 }, {
   timestamps: true,
   collection: 'users',

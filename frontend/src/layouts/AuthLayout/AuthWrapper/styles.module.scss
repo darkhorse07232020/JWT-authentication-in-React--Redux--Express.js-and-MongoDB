@@ -1,0 +1,42 @@
+.authWrapper {
+  @apply mx-auto w-full md:w-100 max-w-100 px-6 py-12 flex flex-wrap justify-center items-center;
+
+  .logo {
+    @apply md:w-72 w-52 md:h-72 h-52 object-cover;
+  }
+
+  .header {
+    @apply text-center w-full;
+  }
+
+  .tabWrapper {
+    @apply flex w-full;
+
+    .link {
+      @apply w-1/2 py-4 px-1 text-center border-b-2 border-primary;
+      &.active {
+        @apply border-secondary;
+      }
+    }
+  }
+
+  .socialHr {
+    @apply relative px-3 py-5;
+    &::before {
+      content: " ";
+      @apply bg-lightBlue absolute top-1/2 w-20 h-1 -left-20 -z-1;
+    }
+    &::after {
+      content: " ";
+      @apply bg-lightBlue absolute top-1/2 w-20 h-1 -right-20 -z-1;
+    }
+  }
+
+  .socialGroup {
+    @apply w-full flex space-x-4 justify-center items-center;
+
+    .social {
+      @apply w-12 h-12 cursor-pointer;
+    }
+  }
+}

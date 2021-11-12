@@ -1,0 +1,18 @@
+.wrapper {
+  @apply flex items-center;
+
+  .checkWrapper {
+    @apply relative h-8 w-8 min-w-8 overflow-hidden;
+
+    .checkbox {
+      @apply h-8 w-8 bg-transparent border-2 absolute top-0 text-secondary;
+      &:checked {
+        @apply bg-secondary;
+      }
+    }
+  }
+
+  .label {
+    @apply ml-4 block text-base font-light text-white;
+  }
+}

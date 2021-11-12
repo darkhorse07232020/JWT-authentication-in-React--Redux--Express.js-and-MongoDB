@@ -1,0 +1,7 @@
+.button {
+  @apply flex justify-center py-4 px-4 rounded-full shadow-sm text-xl font-bold uppercase focus:outline-none;
+
+  &.yellow {
+    @apply text-white bg-secondary hover:bg-yellow-400;
+  }
+}

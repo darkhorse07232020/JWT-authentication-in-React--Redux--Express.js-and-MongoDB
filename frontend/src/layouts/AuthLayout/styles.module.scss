@@ -1,0 +1,18 @@
+.wrapper {
+  @apply relative overflow-hidden text-white;
+
+  .backgroundWrapper {
+    @apply fixed w-screen h-screen m-auto md:p-36 -z-10;
+
+    .backdrop {
+      @apply absolute inset-0 w-screen h-screen mix-blend-multiply bg-primary opacity-95;
+    }
+
+    .background {
+      @apply w-full h-full object-fill;
+    }
+  }
+  .container {
+    @apply w-full;
+  }
+}

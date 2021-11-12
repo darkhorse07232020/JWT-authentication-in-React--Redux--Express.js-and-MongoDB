@@ -1,0 +1,22 @@
+.wrapper {
+  @apply w-screen h-screen;
+
+  .placeholder {
+    @apply inline-block h-screen align-middle mx-auto;
+  }
+
+  .container {
+    @apply inline-block w-full align-middle justify-center;
+    .formWrapper {
+      @apply w-full mx-auto md:w-100 max-w-100 px-6 py-12;
+  
+      .description {
+        @apply text-base mb-2;
+      }
+  
+      .button {
+        @apply w-1/2 mx-auto mt-8;
+      }
+    }
+  }
+}

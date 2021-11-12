@@ -1,0 +1,23 @@
+.wrapper {
+  @apply relative bg-lightBlue opacity-90;
+
+  .input {
+    @apply appearance-none block w-full px-6 py-5 shadow-sm bg-transparent focus:outline-none text-base font-light text-white;
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: white !important;
+      transition: background-color 50000s ease-in-out 0s;
+    }
+
+    &:focus-within,
+    &:not(:placeholder-shown) {
+      & ~ .label {
+        @apply transform scale-75 -translate-y-5 text-white duration-300 origin-0;
+      }
+    }
+  }
+
+  .label {
+    @apply block font-light text-white absolute top-5 left-6 -z-1;
+  }
+}

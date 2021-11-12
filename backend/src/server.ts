@@ -1,5 +1,6 @@
-import express, { Application, Request, Response } from "express";
+import express, { Application } from "express";
 import cors from 'cors';
+
 import mongoose from "mongoose";
 import baseRouter from "./routes";
 
@@ -15,15 +16,6 @@ app.use(cors());
 
 app.use("/api", baseRouter);
 
-app.get(
-  "/",
-  async (req: Request, res: Response): Promise<Response> => {
-    return res.status(200).send({
-      message: "Hello World!",
-    });
-  }
-);
-
 // db
 mongoose
   .connect(process.env.DATABASE || "")
@@ -34,5 +26,5 @@ try {
     console.log(`Connected successfully on port ${port}`);
   });
 } catch (error) {
-  console.error(`Error occured: ${error.message}`);
+  console.error(`Error occurred: ${error.message}`);
 }
